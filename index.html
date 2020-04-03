@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".signup").css('box-shadow', '10px 0px 10px 1px #aaaaaa');
+            $(".login-form").hide();
+            $(".login").css({ '-webkit-box-shadow': 'none', '-moz-box-shadow': 'none', 'box-shadow': 'none' });
+            $(".login").css("background", "none");
+
+            $(".login").click(function () {
+                $(".signup-form").hide();
+                $(".login-form").show();
+                $(".signup").css("background", "none");
+                $(".signup").css({ '-webkit-box-shadow': 'none', '-moz-box-shadow': 'none', 'box-shadow': 'none' });
+                $(".login").css("background", "#fff");
+                $(".login").css('box-shadow', '-10px 0px 10px 1px #aaaaaa');
+            });
+
+            $(".signup").click(function () {
+                $(".signup-form").show();
+                $(".login-form").hide();
+                $(".login").css("background", "none");
+                $(".login").css({ '-webkit-box-shadow': 'none', '-moz-box-shadow': 'none', 'box-shadow': 'none' });
+                $(".signup").css("background", "#fff");
+                $(".signup").css('box-shadow', '10px 0px 10px 1px #aaaaaa');
+            });
+
+            $(".btn").click(function () {
+                $(".input").val("");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="signup">Sign Up</div>
+            <div class="login">Log In</div>
+
+            <div class="signup-form">
+                <div class="input-container">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="Your Email Address" class="input"><br />
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-at icon"></i>
+                    <input type="text" placeholder="Choose an Username" class="input"><br />
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-hashtag icon"></i>
+                    <input type="password" placeholder="Choose a Password" class="input"><br />
+                </div>
+                <div class="btn">Create account</div>
+            </div>
+
+            <div class="login-form">
+                <div class="input-container">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="Email or Username" class="input"><br />
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-hashtag icon"></i>
+                    <input type="password" placeholder="Password" class="input"><br />
+                </div>
+                <div class="btn">log in</div>
+                <span style="font-size: 0.8em;"><a href="#">Forgot username or password?</a></span>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
